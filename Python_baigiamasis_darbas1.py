@@ -10,7 +10,7 @@
 #
 # Reikalavimai: Naudoti sąrašus,failų skaitymą ir rašymą, funkcijas.
 
-# 2
+# 2. Sudarykite visų pasirinkto gamintojo (pvz.: „Volvo“) automobilių sąrašą, ekrane atspausdinkite automobilio valstybinį numerį, modelį, bei pagaminimo metus. Jei tokio automobilio sąraše nėra atspausdinkite pranešimą - "Tokio gamintojo automobilių sąraše nėra".
 def atrinkti_automobili_pagal_gamintoja(autoparkas, gamintojas):
     atrinkti = []
     for automobilis in autoparkas:
@@ -48,7 +48,7 @@ atrinkti = atrinkti_automobili_pagal_gamintoja(autoparkas, gamintojas)
 rezultatas = atrinktu_automobiliu_isvedimas(atrinkti, gamintojas)
 print(rezultatas)
 
-#1
+#1. Raskite, kurių gamintojų automobilių yra daugiau nei vienas, ekrane atspausdinkite gamintojų pavadinimus. (Atspausdinkite ir kiekį - NEBŪTINA)
 
 gamintojai = [auto['gamintojas'] for auto in autoparkas]
 pasikartojantys = set([gamintojas for gamintojas in gamintojai if gamintojai.count(gamintojas) > 1])
@@ -68,7 +68,7 @@ for gamintojas, kiekis in gamintoju_skaicius.items():
 print()
 
 
-# 3
+# 3. Sudarykite sąrašą, senesnių nei 10 metų, į failą „Senienos.csv“ surašykite visus jų duomenis. Jei senienų programa neranda atspausdinkite pranešimą į failą - "Senesnių nei 10 metų automobilių sąraše nėra".
 
 from datetime import datetime
 from csv import writer
